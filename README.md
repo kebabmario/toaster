@@ -9,6 +9,7 @@ _Powered by Cloudflare Speed Test endpoints_
 ## Developers
 
 - @kebabmario
+- @tacwreck
 
 ## Preview
 
