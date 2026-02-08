@@ -5,31 +5,31 @@ const pages = {
     toc: ["What is Toaster?", "How it works"],
     content: `
       <p class="lead">
-        Welcome to Toaster.
-        A fast, minimal, and realistic internet speed testing tool built for clarity and performance.
+        Welcome to Toaster — a fast, minimal, and realistic internet speed testing tool
+        built for clarity, accuracy, and performance.
       </p>
 
       <hr />
 
-      <h2 id="what">What is Toaster?</h2>
+      <h2>What is Toaster?</h2>
       <p>
-        Toaster is a browser-based internet speed testing utility designed to measure
-        real-world download throughput using modern web APIs and globally distributed infrastructure.
+        Toaster is a browser-based speed testing utility designed to measure real-world
+        download throughput using sustained transfers rather than short synthetic bursts.
       </p>
       <p>
-        Instead of relying on short synthetic bursts, Toaster performs sustained transfers
-        to give results that better represent everyday browsing, streaming, and downloads.
+        This approach provides results that better reflect everyday usage such as streaming,
+        gaming, and large downloads.
       </p>
 
       <hr />
 
-      <h2 id="how">How it works</h2>
+      <h2>How it works</h2>
       <p>
-        When Toaster starts, it fetches data from nearby network endpoints over a fixed time window.
-        The total transferred data is then converted into a stable Mbps value.
+        Toaster downloads data from globally distributed edge endpoints over a fixed time window.
+        The total transferred data is converted into an average Mbps value.
       </p>
       <p>
-        All calculations happen locally in your browser. No personal data is collected or stored.
+        All tests are executed client-side. No personal data is collected or stored.
       </p>
     `,
     next: "installation"
@@ -41,24 +41,22 @@ const pages = {
     toc: ["Requirements", "Setup"],
     content: `
       <p class="lead">
-        Getting started with Toaster takes only a few minutes.
-        There are no dependencies or complex build steps required.
+        Setting up Toaster is straightforward and requires no build tools or dependencies.
       </p>
 
       <hr />
 
-      <h2 id="req">Requirements</h2>
+      <h2>Requirements</h2>
       <p>
-        Toaster runs entirely in the browser and requires a modern web environment.
-        Any up-to-date version of Chrome, Edge, Firefox, or Safari is supported.
+        Any modern browser with support for Fetch and Streams APIs is sufficient.
       </p>
 
       <hr />
 
-      <h2 id="setup">Setup</h2>
+      <h2>Setup</h2>
       <p>
-        Clone the repository from GitHub and open the index.html file in your browser.
-        For deployment, GitHub Pages is fully supported.
+        Clone the GitHub repository and open index.html in your browser,
+        or deploy directly using GitHub Pages.
       </p>
     `,
     next: "usage"
@@ -67,27 +65,24 @@ const pages = {
   usage: {
     title: "Usage",
     breadcrumb: "Docs / Usage",
-    toc: ["Running a test", "Understanding results"],
+    toc: ["Running a test", "Results"],
     content: `
       <p class="lead">
-        Using Toaster is intentionally simple.
-        The test begins automatically when the page loads.
+        Toaster starts automatically — no configuration required.
       </p>
 
       <hr />
 
-      <h2 id="run">Running a test</h2>
+      <h2>Running a test</h2>
       <p>
-        Once loaded, Toaster immediately starts downloading data.
-        No buttons or configuration are required.
+        Once loaded, the test begins immediately and runs for a fixed duration.
       </p>
 
       <hr />
 
-      <h2 id="results">Understanding results</h2>
+      <h2>Results</h2>
       <p>
-        Results are shown in Mbps and reflect sustained throughput rather than peak speed.
-        This makes them more useful for real-world scenarios.
+        Speeds are displayed in Mbps and represent sustained throughput rather than peak values.
       </p>
     `,
     next: "accuracy"
@@ -99,23 +94,21 @@ const pages = {
     toc: ["Methodology", "Limitations"],
     content: `
       <p class="lead">
-        Accuracy is a core design goal of Toaster.
+        Toaster prioritizes consistency and realism over inflated benchmark numbers.
       </p>
 
       <hr />
 
-      <h2 id="method">Methodology</h2>
+      <h2>Methodology</h2>
       <p>
-        Toaster measures average throughput over time rather than instantaneous speed.
-        This reduces the impact of network spikes and buffering.
+        Measurements are averaged over time to smooth out network spikes and buffering.
       </p>
 
       <hr />
 
-      <h2 id="limits">Limitations</h2>
+      <h2>Limitations</h2>
       <p>
-        Results can still be influenced by background traffic, VPNs,
-        and device performance.
+        VPNs, background traffic, and device performance can still affect results.
       </p>
     `,
     next: "privacy"
@@ -127,22 +120,21 @@ const pages = {
     toc: ["Data handling", "Tracking"],
     content: `
       <p class="lead">
-        Privacy is taken seriously in Toaster.
+        Toaster is built with privacy as a first-class concern.
       </p>
 
       <hr />
 
-      <h2 id="data">Data handling</h2>
+      <h2>Data handling</h2>
       <p>
-        No personal data, IP addresses, or identifiers are stored.
-        All tests are performed locally in your browser.
+        No IP addresses, cookies, or identifiers are stored.
       </p>
 
       <hr />
 
-      <h2 id="tracking">Tracking</h2>
+      <h2>Tracking</h2>
       <p>
-        Toaster does not use cookies, analytics, or fingerprinting techniques.
+        Toaster does not use analytics, tracking pixels, or fingerprinting.
       </p>
     `,
     next: "credits"
@@ -154,87 +146,72 @@ const pages = {
     toc: ["Cloudflare", "Open source"],
     content: `
       <p class="lead">
-        Toaster is built on top of reliable, modern infrastructure.
+        Toaster relies on modern, trusted infrastructure.
       </p>
 
       <hr />
 
-      <h2 id="cf">Cloudflare</h2>
+      <h2>Cloudflare</h2>
       <p>
-        Network requests and test endpoints are powered by Cloudflare’s global edge network,
-        ensuring low latency and consistent results worldwide.
+        Speed test endpoints are powered by Cloudflare’s global edge network,
+        providing low latency and consistent performance worldwide.
       </p>
 
       <hr />
 
-      <h2 id="oss">Open source</h2>
+      <h2>Open source</h2>
       <p>
-        Toaster is fully open source and hosted on GitHub.
-        Contributions and improvements are welcome.
+        Toaster is open source and maintained on GitHub.
       </p>
     `,
     next: null
   }
 };
 
-/* ====== DOM ELEMENTS ====== */
 const navItems = document.querySelectorAll(".nav");
-const titleEl = document.querySelector("h1");
-const breadcrumbEl = document.querySelector(".breadcrumb");
-const docEl = document.querySelector(".doc");
-const tocEl = document.querySelector(".toc");
-const nextEl = document.querySelector(".next");
+const doc = document.querySelector(".doc");
+const toc = document.querySelector(".toc");
 
-/* ====== LOAD PAGE ====== */
 function loadPage(key) {
   const page = pages[key];
   if (!page) return;
 
-  // Update active nav
   navItems.forEach(n => n.classList.remove("active"));
   document.querySelector(`.nav[data-page="${key}"]`).classList.add("active");
 
-  // Update header content
-  titleEl.textContent = page.title;
-  breadcrumbEl.textContent = page.breadcrumb;
-
-  // Update main content (preserve breadcrumb + h1)
-  docEl.innerHTML = `
+  doc.innerHTML = `
     <p class="breadcrumb">${page.breadcrumb}</p>
     <h1>${page.title}</h1>
     ${page.content}
     ${
       page.next
         ? `<div class="next">
-             <span>Next</span>
-             <a href="#" data-next="${page.next}">
-               ${pages[page.next].title} →
-             </a>
-           </div>`
+            <span>Next</span>
+            <a href="#" id="next-btn">${pages[page.next].title} →</a>
+          </div>`
         : ""
     }
     <p class="updated">Last updated on February 1, 2026</p>
   `;
 
-  // Update TOC
-  tocEl.innerHTML = `<p class="toc-title">On this page</p>`;
-  page.toc.forEach(item => {
+  toc.innerHTML = `<p class="toc-title">On this page</p>`;
+  page.toc.forEach(t => {
     const a = document.createElement("a");
-    a.textContent = item;
-    tocEl.appendChild(a);
+    a.textContent = t;
+    toc.appendChild(a);
   });
 
-  // Hook next button
-  const nextBtn = document.querySelector("[data-next]");
+  const nextBtn = document.getElementById("next-btn");
   if (nextBtn) {
     nextBtn.onclick = e => {
       e.preventDefault();
-      loadPage(nextBtn.dataset.next);
+      loadPage(page.next);
     };
   }
 }
 
-/* ====== NAV CLICKS ====== */
 navItems.forEach(nav => {
-  const key = nav.textContent.toLowerCase();
-  nav.datas
+  nav.onclick = () => loadPage(nav.dataset.page);
+});
+
+loadPage("introduction");
