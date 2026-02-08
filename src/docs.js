@@ -1,209 +1,240 @@
 const pages = {
-  Introduction: {
-    breadcrumb: "Docs / Introduction",
+  introduction: {
     title: "Introduction",
-    lead: `Welcome to Toaster.
-A fast, minimal, and realistic internet speed testing tool built for clarity and performance.`,
-    sections: [
-      {
-        h2: "What is Toaster?",
-        p: [
-          "Toaster is a browser-based speed testing utility that measures real-world download throughput using modern web APIs and globally distributed infrastructure.",
-          "Unlike synthetic benchmarks, Toaster focuses on sustained transfer rates to give you results that reflect actual day-to-day internet usage."
-        ]
-      },
-      {
-        h2: "How it works",
-        p: [
-          "When you open Toaster, the test begins automatically. Data is fetched over a fixed time window to calculate an accurate Mbps value.",
-          "All tests are performed client-side and do not store personal data."
-        ]
-      }
-    ],
-    next: "Installation"
+    breadcrumb: "Docs / Introduction",
+    toc: ["What is Toaster?", "How it works"],
+    content: `
+      <p class="lead">
+        Welcome to Toaster.
+        A fast, minimal, and realistic internet speed testing tool built for clarity and performance.
+      </p>
+
+      <hr />
+
+      <h2 id="what">What is Toaster?</h2>
+      <p>
+        Toaster is a browser-based internet speed testing utility designed to measure
+        real-world download throughput using modern web APIs and globally distributed infrastructure.
+      </p>
+      <p>
+        Instead of relying on short synthetic bursts, Toaster performs sustained transfers
+        to give results that better represent everyday browsing, streaming, and downloads.
+      </p>
+
+      <hr />
+
+      <h2 id="how">How it works</h2>
+      <p>
+        When Toaster starts, it fetches data from nearby network endpoints over a fixed time window.
+        The total transferred data is then converted into a stable Mbps value.
+      </p>
+      <p>
+        All calculations happen locally in your browser. No personal data is collected or stored.
+      </p>
+    `,
+    next: "installation"
   },
 
-  Installation: {
-    breadcrumb: "Docs / Installation",
+  installation: {
     title: "Installation",
-    lead: `Getting started with Toaster takes only a few minutes.`,
-    sections: [
-      {
-        h2: "Requirements",
-        p: [
-          "A modern browser with JavaScript enabled.",
-          "A stable internet connection for accurate testing."
-        ]
-      },
-      {
-        h2: "Setup",
-        p: [
-          "Clone the repository from GitHub and host it on any static server.",
-          "Toaster works perfectly with GitHub Pages, Cloudflare Pages, or Vercel."
-        ]
-      }
-    ],
-    next: "Usage"
+    breadcrumb: "Docs / Installation",
+    toc: ["Requirements", "Setup"],
+    content: `
+      <p class="lead">
+        Getting started with Toaster takes only a few minutes.
+        There are no dependencies or complex build steps required.
+      </p>
+
+      <hr />
+
+      <h2 id="req">Requirements</h2>
+      <p>
+        Toaster runs entirely in the browser and requires a modern web environment.
+        Any up-to-date version of Chrome, Edge, Firefox, or Safari is supported.
+      </p>
+
+      <hr />
+
+      <h2 id="setup">Setup</h2>
+      <p>
+        Clone the repository from GitHub and open the index.html file in your browser.
+        For deployment, GitHub Pages is fully supported.
+      </p>
+    `,
+    next: "usage"
   },
 
-  Usage: {
-    breadcrumb: "Docs / Usage",
+  usage: {
     title: "Usage",
-    lead: `Running a test with Toaster is fully automatic.`,
-    sections: [
-      {
-        h2: "Running a test",
-        p: [
-          "Open the website and the speed test will begin immediately.",
-          "Results are calculated based on sustained throughput rather than short bursts."
-        ]
-      }
-    ],
-    next: "Accuracy"
+    breadcrumb: "Docs / Usage",
+    toc: ["Running a test", "Understanding results"],
+    content: `
+      <p class="lead">
+        Using Toaster is intentionally simple.
+        The test begins automatically when the page loads.
+      </p>
+
+      <hr />
+
+      <h2 id="run">Running a test</h2>
+      <p>
+        Once loaded, Toaster immediately starts downloading data.
+        No buttons or configuration are required.
+      </p>
+
+      <hr />
+
+      <h2 id="results">Understanding results</h2>
+      <p>
+        Results are shown in Mbps and reflect sustained throughput rather than peak speed.
+        This makes them more useful for real-world scenarios.
+      </p>
+    `,
+    next: "accuracy"
   },
 
-  Accuracy: {
-    breadcrumb: "Docs / Accuracy",
+  accuracy: {
     title: "Accuracy",
-    lead: `Toaster prioritizes realism over inflated numbers.`,
-    sections: [
-      {
-        h2: "Real-world measurements",
-        p: [
-          "Tests run over a fixed duration to avoid misleading peak speeds.",
-          "Results better represent actual download performance."
-        ]
-      }
-    ],
-    next: "Privacy"
+    breadcrumb: "Docs / Accuracy",
+    toc: ["Methodology", "Limitations"],
+    content: `
+      <p class="lead">
+        Accuracy is a core design goal of Toaster.
+      </p>
+
+      <hr />
+
+      <h2 id="method">Methodology</h2>
+      <p>
+        Toaster measures average throughput over time rather than instantaneous speed.
+        This reduces the impact of network spikes and buffering.
+      </p>
+
+      <hr />
+
+      <h2 id="limits">Limitations</h2>
+      <p>
+        Results can still be influenced by background traffic, VPNs,
+        and device performance.
+      </p>
+    `,
+    next: "privacy"
   },
 
-  Privacy: {
-    breadcrumb: "Docs / Privacy",
+  privacy: {
     title: "Privacy",
-    lead: `Your privacy is respected by design.`,
-    sections: [
-      {
-        h2: "Data handling",
-        p: [
-          "No personal information is collected or stored.",
-          "All measurements are performed locally in your browser."
-        ]
-      }
-    ],
-    next: "Credits"
+    breadcrumb: "Docs / Privacy",
+    toc: ["Data handling", "Tracking"],
+    content: `
+      <p class="lead">
+        Privacy is taken seriously in Toaster.
+      </p>
+
+      <hr />
+
+      <h2 id="data">Data handling</h2>
+      <p>
+        No personal data, IP addresses, or identifiers are stored.
+        All tests are performed locally in your browser.
+      </p>
+
+      <hr />
+
+      <h2 id="tracking">Tracking</h2>
+      <p>
+        Toaster does not use cookies, analytics, or fingerprinting techniques.
+      </p>
+    `,
+    next: "credits"
   },
 
-  Credits: {
-    breadcrumb: "Docs / Credits",
+  credits: {
     title: "Credits",
-    lead: `Toaster would not be possible without open infrastructure.`,
-    sections: [
-      {
-        h2: "Cloudflare",
-        p: [
-          "Network requests are powered by Cloudflare’s global edge infrastructure.",
-          "Cloudflare enables fast, reliable, and geographically distributed testing."
-        ]
-      }
-    ],
+    breadcrumb: "Docs / Credits",
+    toc: ["Cloudflare", "Open source"],
+    content: `
+      <p class="lead">
+        Toaster is built on top of reliable, modern infrastructure.
+      </p>
+
+      <hr />
+
+      <h2 id="cf">Cloudflare</h2>
+      <p>
+        Network requests and test endpoints are powered by Cloudflare’s global edge network,
+        ensuring low latency and consistent results worldwide.
+      </p>
+
+      <hr />
+
+      <h2 id="oss">Open source</h2>
+      <p>
+        Toaster is fully open source and hosted on GitHub.
+        Contributions and improvements are welcome.
+      </p>
+    `,
     next: null
   }
 };
 
-// -----------------------------
-// DOM references
-// -----------------------------
+/* ====== DOM ELEMENTS ====== */
 const navItems = document.querySelectorAll(".nav");
-const doc = document.querySelector(".doc");
+const titleEl = document.querySelector("h1");
+const breadcrumbEl = document.querySelector(".breadcrumb");
+const docEl = document.querySelector(".doc");
+const tocEl = document.querySelector(".toc");
+const nextEl = document.querySelector(".next");
 
-// -----------------------------
-// Render function
-// -----------------------------
-function renderPage(name) {
-  const page = pages[name];
+/* ====== LOAD PAGE ====== */
+function loadPage(key) {
+  const page = pages[key];
   if (!page) return;
 
-  // Clear doc
-  doc.innerHTML = "";
+  // Update active nav
+  navItems.forEach(n => n.classList.remove("active"));
+  document.querySelector(`.nav[data-page="${key}"]`).classList.add("active");
 
-  // Breadcrumb
-  const breadcrumb = document.createElement("p");
-  breadcrumb.className = "breadcrumb";
-  breadcrumb.textContent = page.breadcrumb;
-  doc.appendChild(breadcrumb);
+  // Update header content
+  titleEl.textContent = page.title;
+  breadcrumbEl.textContent = page.breadcrumb;
 
-  // Title
-  const h1 = document.createElement("h1");
-  h1.textContent = page.title;
-  doc.appendChild(h1);
+  // Update main content (preserve breadcrumb + h1)
+  docEl.innerHTML = `
+    <p class="breadcrumb">${page.breadcrumb}</p>
+    <h1>${page.title}</h1>
+    ${page.content}
+    ${
+      page.next
+        ? `<div class="next">
+             <span>Next</span>
+             <a href="#" data-next="${page.next}">
+               ${pages[page.next].title} →
+             </a>
+           </div>`
+        : ""
+    }
+    <p class="updated">Last updated on February 1, 2026</p>
+  `;
 
-  // Lead
-  const lead = document.createElement("p");
-  lead.className = "lead";
-  lead.textContent = page.lead;
-  doc.appendChild(lead);
-
-  doc.appendChild(document.createElement("hr"));
-
-  // Sections
-  page.sections.forEach(section => {
-    const h2 = document.createElement("h2");
-    h2.textContent = section.h2;
-    doc.appendChild(h2);
-
-    section.p.forEach(text => {
-      const p = document.createElement("p");
-      p.textContent = text;
-      doc.appendChild(p);
-    });
-
-    doc.appendChild(document.createElement("hr"));
+  // Update TOC
+  tocEl.innerHTML = `<p class="toc-title">On this page</p>`;
+  page.toc.forEach(item => {
+    const a = document.createElement("a");
+    a.textContent = item;
+    tocEl.appendChild(a);
   });
 
-  // Next button
-  if (page.next) {
-    const next = document.createElement("div");
-    next.className = "next";
-
-    next.innerHTML = `
-      <span>Next</span>
-      <a href="#">${page.next} →</a>
-    `;
-
-    next.querySelector("a").addEventListener("click", e => {
+  // Hook next button
+  const nextBtn = document.querySelector("[data-next]");
+  if (nextBtn) {
+    nextBtn.onclick = e => {
       e.preventDefault();
-      setActive(page.next);
-    });
-
-    doc.appendChild(next);
+      loadPage(nextBtn.dataset.next);
+    };
   }
-
-  // Updated
-  const updated = document.createElement("p");
-  updated.className = "updated";
-  updated.textContent = "Last updated on February 1, 2026";
-  doc.appendChild(updated);
-
-  // Scroll reset
-  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-// -----------------------------
-// Nav click handling
-// -----------------------------
-function setActive(name) {
-  navItems.forEach(n => {
-    n.classList.toggle("active", n.textContent.trim() === name);
-  });
-  renderPage(name);
-}
-
-navItems.forEach(item => {
-  item.addEventListener("click", () => {
-    setActive(item.textContent.trim());
-  });
-});
-
-// Initial render
-renderPage("Introduction");
+/* ====== NAV CLICKS ====== */
+navItems.forEach(nav => {
+  const key = nav.textContent.toLowerCase();
+  nav.datas
