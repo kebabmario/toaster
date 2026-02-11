@@ -256,15 +256,14 @@ const pages = {
     toc: ["Infrastructure", "Open source"],
     content: `
       <p class="lead">
-        Toaster is powered by modern web technologies
-        and globally distributed infrastructure.
+        Toaster is powered Cloudflare and GitHub.
       </p>
 
       <hr />
 
       <h2>Infrastructure</h2>
       <p>
-        Speed test endpoints are delivered via distributed edge networks,
+        Cloudflare speed test endpoints are used to delivered via distributed edge networks,
         ensuring low latency and global availability.
       </p>
       <p>
