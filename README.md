@@ -11,7 +11,7 @@ _Powered by Cloudflare Speed Test endpoints_
 - @kebabmario
 - @tacwreck
 
-## Preview
+## Preview (Outdated see website for updated version)
 
 ![Toaster Preview](./preview.jpeg)
 
