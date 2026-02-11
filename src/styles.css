@@ -120,3 +120,27 @@ body {
   color: white;
   opacity: 1;
 }
+
+.powered-by {
+  position: fixed;
+  bottom: 16px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+.powered-by img {
+  height: 16px;
+  width: auto;
+}
+
+.powered-by:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
