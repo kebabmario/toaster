@@ -16,4 +16,8 @@ _Powered by Cloudflare Speed Test endpoints_
 ![Toaster Preview](./preview.jpeg)
 
 
-[Use Toaster now!](https://toasters.qzz.io)
+[Use Toaster now!](https://usetoaster.app/)
+
+## Other Projects
+
+Check out [atmos](https://useatmos.me/), a simple, lightweight weather website.
