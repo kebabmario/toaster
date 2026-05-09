@@ -1,44 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Toaster</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../src/styles.css">
-  <link rel="icon" href="src/assets/favicon (2).png" type="image/png" 
+  <meta charset="UTF-8" />
+  <title>Toaster — Internet speed test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="src/styles.css" />
+  <link rel="icon" href="src/assets/favicon (2).png" type="image/png" />
 </head>
-  <a 
-  href="https://www.cloudflare.com/" 
-  target="_blank" 
-  rel="noopener noreferrer" 
-  class="powered-by"
->
-  <img 
-    src="https://upload.wikimedia.org/wikipedia/commons/9/94/Cloudflare_Logo.png" 
-    alt="cloudflare logo"
-  />
-  <span>Powered by Cloudflare</span>
-</a>
-
 <body>
   <div class="bg"></div>
 
-  <div class="container">
-    <div class="brand">Toaster</div>
-    <div class="speed" id="speed">0.00</div>
-    <div class="unit">Mbps</div>
-    <div class="label">Testing internet speed…</div>
-  </div>
+  <main class="container">
+    <div class="brand">TOASTER</div>
+
+    <div class="speed-line">
+      <span class="speed" id="speed">0.00</span>
+      <span class="unit">Mbps</span>
+    </div>
+
+    <div class="label" id="label">Testing internet speed…</div>
+
+    <button class="show-more" id="show-more" type="button" hidden>
+      <span>Show more info</span>
+      <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"/>
+      </svg>
+    </button>
+
+    <section class="details" id="details" hidden>
+      <div class="details-grid">
+
+        <div class="metric">
+          <div class="metric-label">Latency · Unloaded</div>
+          <div class="metric-value" id="m-latency-unloaded">
+            <span class="dots"><i></i><i></i><i></i></span>
+          </div>
+          <div class="metric-unit">ms</div>
+        </div>
+
+        <div class="metric">
+          <div class="metric-label">Latency · Loaded</div>
+          <div class="metric-value" id="m-latency-loaded">
+            <span class="dots"><i></i><i></i><i></i></span>
+          </div>
+          <div class="metric-unit">ms</div>
+        </div>
+
+        <div class="metric">
+          <div class="metric-label">Upload</div>
+          <div class="metric-value" id="m-upload">
+            <span class="dots"><i></i><i></i><i></i></span>
+          </div>
+          <div class="metric-unit">Mbps</div>
+        </div>
+
+      </div>
+
+      <div class="details-list">
+        <div class="info-row">
+          <span class="info-key">Client IP</span>
+          <span class="info-value" id="m-ip"><span class="dots"><i></i><i></i><i></i></span></span>
+        </div>
+        <div class="info-row">
+          <span class="info-key">ISP</span>
+          <span class="info-value" id="m-isp"><span class="dots"><i></i><i></i><i></i></span></span>
+        </div>
+        <div class="info-row">
+          <span class="info-key">Cloudflare edge</span>
+          <span class="info-value" id="m-colo"><span class="dots"><i></i><i></i><i></i></span></span>
+        </div>
+        <div class="info-row">
+          <span class="info-key">Location</span>
+          <span class="info-value" id="m-loc"><span class="dots"><i></i><i></i><i></i></span></span>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <div class="toast" id="toast"></div>
 
-  <div class="footer-links">
-  <a href="https://github.com/kebabmario/toaster" class="github-link">View GitHub</a>
-  <a href="https://docs.usetoaster.app" class="docs-link">See the documentation</a>
-</div>
+  <a
+    href="https://www.cloudflare.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="powered-by"
+  >
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/9/94/Cloudflare_Logo.png"
+      alt="cloudflare logo"
+    />
+    <span>Powered by Cloudflare</span>
+  </a>
 
-  <script src="../src/script.js"></script>
+  <nav class="footer-links">
+    <a href="https://github.com/kebabmario/toaster" target="_blank" rel="noopener noreferrer">View GitHub</a>
+    <a href="https://docs.usetoaster.app" target="_blank" rel="noopener noreferrer">See the documentation</a>
+  </nav>
+
+  <script src="src/script.js"></script>
 </body>
 </html>
