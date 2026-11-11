@@ -96,9 +96,6 @@ function Run({ onRestart }) {
           <a href="https://github.com/kebabmario/toaster" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
-          <a href="https://docs.usetoaster.app" target="_blank" rel="noopener noreferrer">
-            Documentation
-          </a>
           <a className="credit" href="https://www.cloudflare.com/" target="_blank" rel="noopener noreferrer">
             <img src="/cloudflare.webp" alt="" height="14" />
             Powered by Cloudflare

@@ -6,7 +6,7 @@ By taking part, you agree to follow the [code of conduct](CODE_OF_CONDUCT.md).
 
 ## Questions
 
-Read the [documentation](https://docs.usetoaster.app) and search [existing issues](https://github.com/kebabmario/toaster/issues) first. If neither answers your question, open an issue and give as much context as you can.
+Search [existing issues](https://github.com/kebabmario/toaster/issues) first. If they don't answer your question, open an issue and give as much context as you can.
 
 ## Reporting bugs
 
