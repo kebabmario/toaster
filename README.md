@@ -21,3 +21,14 @@ _Powered by Cloudflare Speed Test endpoints_
 ## Other Projects
 
 Check out [atmos](https://useatmos.me/), a simple, lightweight weather website.
+
+## Development
+
+Built with Next.js and React, exported as static files for GitHub Pages.
+
+```bash
+npm install
+npm run dev     # local server
+npm test        # unit tests
+npm run build   # static site in out/
+```

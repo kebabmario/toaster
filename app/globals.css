@@ -1,0 +1,275 @@
+/* Midnight: navy page, one bright filament line. Same in light and dark mode. */
+:root {
+  --page: #0f1b3d;
+  --ink: #f2f0e8;
+  --dim: #97a3c6;
+  --rule: #2c3a66;
+  --hot: #ffd23f;
+  --pad: clamp(20px, 4vw, 56px);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--font), system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--hot);
+  color: var(--page);
+}
+
+a,
+button {
+  color: inherit;
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--hot);
+  outline-offset: 3px;
+}
+
+.shell {
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 32px;
+  padding: var(--pad);
+}
+
+/* Top */
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.logo {
+  width: 1.1em;
+  height: 1.1em;
+}
+
+.status {
+  color: var(--dim);
+  text-align: right;
+}
+
+/* Readout */
+
+.readout {
+  align-self: end;
+  min-width: 0;
+}
+
+.speed {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 16px;
+}
+
+.number {
+  font-size: clamp(84px, 23vw, 340px);
+  font-weight: 600;
+  font-stretch: 75%;
+  line-height: 0.82;
+  letter-spacing: -0.045em;
+  font-variant-numeric: tabular-nums;
+  margin-left: -0.04em;
+}
+
+.unit {
+  font-size: clamp(15px, 1.6vw, 20px);
+  color: var(--dim);
+}
+
+.coil {
+  display: block;
+  width: calc(100% + 2 * var(--pad));
+  height: clamp(56px, 13vh, 132px);
+  margin: 12px calc(-1 * var(--pad)) 0;
+  overflow: visible;
+}
+
+.coil line,
+.coil polyline {
+  fill: none;
+  vector-effect: non-scaling-stroke;
+}
+
+.coil-rest {
+  stroke: var(--rule);
+  stroke-width: 1;
+}
+
+.coil-hot {
+  stroke: var(--hot);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 6px color-mix(in srgb, var(--hot) 55%, transparent));
+}
+
+.note {
+  margin: 20px 0 0;
+  max-width: 56ch;
+}
+
+/* Figures and connection facts */
+
+dl,
+dd {
+  margin: 0;
+}
+
+.figures,
+.connection {
+  display: grid;
+  gap: 20px 32px;
+  margin-top: 28px;
+}
+
+.figures {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.connection {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+}
+
+dt {
+  color: var(--dim);
+  font-size: 13px;
+}
+
+dd {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.figures dd {
+  font-size: clamp(26px, 3.4vw, 44px);
+  font-weight: 500;
+  font-stretch: 75%;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.figures small {
+  margin-left: 6px;
+  font-size: 13px;
+  font-weight: 400;
+  font-stretch: 100%;
+  letter-spacing: 0;
+  color: var(--dim);
+}
+
+.pending {
+  color: var(--dim);
+  animation: wait 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes wait {
+  to {
+    opacity: 0.3;
+  }
+}
+
+/* Bottom */
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px 28px;
+  font-size: 13px;
+}
+
+.restart {
+  padding: 9px 18px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  background: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.restart:hover {
+  background: var(--ink);
+  color: var(--page);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 24px;
+  color: var(--dim);
+}
+
+.links a {
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: var(--ink);
+}
+
+.credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.credit img {
+  height: 14px;
+  width: auto;
+}
+
+@media (max-width: 720px) {
+  .connection {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .figures {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .figures {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pending {
+    animation: none;
+  }
+}
