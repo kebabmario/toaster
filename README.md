@@ -9,8 +9,6 @@
   <br />
   <a href="https://usetoaster.app"><strong>Run a test</strong></a>
   ·
-  <a href="https://docs.usetoaster.app">Documentation</a>
-  ·
   <a href="https://github.com/kebabmario/toaster/issues/new?template=bug_report.md">Report a bug</a>
   ·
   <a href="https://github.com/kebabmario/toaster/issues/new?template=feature_request.md">Request a feature</a>
