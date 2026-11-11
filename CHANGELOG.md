@@ -6,13 +6,12 @@ All notable changes to Toaster are listed here. The format follows [Keep a Chang
 
 ### Added
 
-- Next.js and React app, exported as static files
+- Next.js and React app, hosted on Vercel
 - New design: a large live download number, a speed trace line, and the Midnight color palette
 - Toaster logo, used as the favicon and in the header
 - All results shown at once, without a "Show more info" toggle
 - "Run again" button to restart the test
 - Unit tests for the measurement helpers
-- GitHub Actions workflow that deploys to GitHub Pages
 - MIT license, security policy, and issue and pull request templates
 
 ### Fixed

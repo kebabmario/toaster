@@ -18,7 +18,6 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-ffd23f" alt="MIT license" /></a>
-  <a href="https://github.com/kebabmario/toaster/actions/workflows/deploy.yml"><img src="https://github.com/kebabmario/toaster/actions/workflows/deploy.yml/badge.svg" alt="Deploy status" /></a>
 </p>
 
 ## About
@@ -50,7 +49,7 @@ Connection details come from these services:
 
 ## Development
 
-Toaster is built with [Next.js](https://nextjs.org/) and React, and exported as static files.
+Toaster is built with [Next.js](https://nextjs.org/) and React, and hosted on [Vercel](https://vercel.com/).
 
 Requirements: Node.js 20 or newer.
 
@@ -67,7 +66,7 @@ Then open http://localhost:3000.
 | --- | --- |
 | `npm run dev` | Starts a local server with hot reload |
 | `npm test` | Runs the unit tests |
-| `npm run build` | Builds the static site into `out/` |
+| `npm run build` | Builds the site for production |
 
 ### Project structure
 
@@ -85,7 +84,7 @@ legacy/             The previous plain HTML version
 
 ### Deployment
 
-Every push to `main` builds the site and publishes it to GitHub Pages through [the deploy workflow](.github/workflows/deploy.yml). In the repository settings, Pages must use **GitHub Actions** as its source.
+Vercel deploys every push to `main` to production. Pull requests get their own preview deployment.
 
 ## Contributing
 

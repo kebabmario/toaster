@@ -30,7 +30,7 @@ Include:
 Toaster is a static site with no server and no user accounts. Relevant reports include:
 
 - Cross-site scripting or script injection on usetoaster.app
-- Problems in the deploy workflow or the published build
+- Problems in the published build
 - Toaster leaking data beyond what the [README](README.md#how-it-works) describes
 
 Out of scope:
